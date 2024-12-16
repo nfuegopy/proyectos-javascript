@@ -1,0 +1,279 @@
+/* Variables y reset */
+:root {
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-secondary: #64748b;
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #1e293b;
+    --color-text-light: #64748b;
+    --footer-bg: #1e293b;
+    --whatsapp-color: #25D366;
+    --heart-color: #ff4b4b;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --border-radius: 0.75rem;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+/* Tarjeta de la calculadora */
+.calculator-card {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* Encabezado */
+.calculator-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    text-align: center;
+}
+
+.calculator-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+}
+
+/* Cuerpo de la calculadora */
+.calculator-body {
+    padding: 2rem;
+}
+
+/* Grupos de entrada */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+/* Estilos de inputs */
+input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: var(--transition);
+    color: var(--color-text);
+    background-color: white;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Botón de calcular */
+.btn-calcular {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-calcular:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-calcular:active {
+    transform: translateY(0);
+}
+
+/* Contenedor del resultado */
+.resultado-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.resultado {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    min-height: 2rem;
+}
+
+/* Footer Estandarizado */
+.footer {
+    background: var(--footer-bg);
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.developer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.developer-info .fa-code {
+    color: var(--color-primary);
+}
+
+.footer-social .whatsapp-link {
+    color: var(--whatsapp-color);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    position: relative;
+}
+
+.footer-social .whatsapp-link:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.footer-social .whatsapp-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--whatsapp-color);
+    border-radius: 50%;
+    opacity: 0.2;
+    transform: scale(0);
+    transition: var(--transition);
+}
+
+.footer-social .whatsapp-link:hover::after {
+    transform: scale(1.5);
+}
+
+.footer-love {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-love .fa-heart {
+    color: var(--heart-color);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.resultado.mostrar {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 1rem auto;
+    }
+
+    .calculator-header {
+        padding: 1.5rem;
+    }
+
+    .calculator-body {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
+}

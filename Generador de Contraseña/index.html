@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas Seguras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> Generador de Contraseñas</h1>
+            <p class="subtitle">Crea contraseñas seguras y personalizadas</p>
+        </header>
+
+        <main class="generator-card">
+            <div class="password-display">
+                <input type="text" id="passwordInput" readonly>
+                <button id="copyBtn" class="copy-btn" title="Copiar al portapapeles">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="length-control">
+                <div class="length-header">
+                    <label for="lengthRange">
+                        <i class="fas fa-text-width"></i> Longitud:
+                    </label>
+                    <span class="length-badge" id="lengthDisplay">8</span>
+                </div>
+                <input 
+                    type="range" 
+                    id="lengthRange" 
+                    min="4" 
+                    max="32" 
+                    value="8" 
+                    class="length-slider"
+                >
+                <div class="length-marks">
+                    <span>4</span>
+                    <span>12</span>
+                    <span>24</span>
+                    <span>32</span>
+                </div>
+            </div>
+
+            <div class="options-grid">
+                <label class="option-item">
+                    <input type="checkbox" id="lowercaseCb" checked>
+                    <span class="checkbox-custom"></span>
+                    <span class="option-text">
+                        <i class="fas fa-font"></i> Minúsculas (a-z)
+                    </span>
+                </label>
+
+                <label class="option-item">
+                    <input type="checkbox" id="uppercaseCb">
+                    <span class="checkbox-custom"></span>
+                    <span class="option-text">
+                        <i class="fas fa-font fa-lg"></i> Mayúsculas (A-Z)
+                    </span>
+                </label>
+
+                <label class="option-item">
+                    <input type="checkbox" id="digitsCb">
+                    <span class="checkbox-custom"></span>
+                    <span class="option-text">
+                        <i class="fas fa-hashtag"></i> Números (0-9)
+                    </span>
+                </label>
+
+                <label class="option-item">
+                    <input type="checkbox" id="specialsCb">
+                    <span class="checkbox-custom"></span>
+                    <span class="option-text">
+                        <i class="fas fa-star"></i> Especiales (!@#$%)
+                    </span>
+                </label>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">
+                <i class="fas fa-sync-alt"></i> Generar Contraseña
+            </button>
+
+            <div class="strength-meter">
+                <div class="strength-label">Fortaleza:</div>
+                <div class="strength-bars" id="strengthBars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p class="developer-info">
+                    <i class="fas fa-code"></i> Desarrollado por Antonio Barrios
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/595982580075" 
+                   class="whatsapp-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Contactar por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="footer-love">
+                <p>Creado con <i class="fas fa-heart pulse"></i> para la comunidad</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

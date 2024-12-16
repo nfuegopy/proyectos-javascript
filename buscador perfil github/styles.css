@@ -1,0 +1,322 @@
+:root {
+    --primary-color: #2ea44f;
+    --secondary-color: #1b1f23;
+    --accent-color: #f6f8fa;
+    --text-color: #24292e;
+    --error-color: #d73a49;
+    --link-color: #0366d6;
+    --footer-bg: #1b1f23;
+    --whatsapp-color: #25D366;
+    --heart-color: #ff4b4b;
+    --border-radius: 12px;
+    --card-shadow: 0 8px 24px rgba(149,157,165,0.2);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+/* Estilos del formulario de búsqueda */
+.search-form {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    background: white;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.search-button {
+    padding: 0 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-button:hover {
+    background: #2c974b;
+    transform: translateY(-2px);
+}
+
+/* Estilos de la tarjeta de perfil */
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info h2 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Estadísticas */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    background: var(--accent-color);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+/* Repositorios */
+.repos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.repo {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    color: var(--link-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.repo:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Tarjeta de error */
+.error-card {
+    text-align: center;
+    padding: 2rem;
+    color: var(--error-color);
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+/* Footer Estandarizado */
+.footer {
+    background: var(--footer-bg);
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.developer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.developer-info .fa-code {
+    color: var(--primary-color);
+}
+
+.footer-social .whatsapp-link {
+    color: var(--whatsapp-color);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    position: relative;
+}
+
+.footer-social .whatsapp-link:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.footer-social .whatsapp-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--whatsapp-color);
+    border-radius: 50%;
+    opacity: 0.2;
+    transform: scale(0);
+    transition: var(--transition);
+}
+
+.footer-social .whatsapp-link:hover::after {
+    transform: scale(1.5);
+}
+
+.footer-love {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-love .fa-heart {
+    color: var(--heart-color);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .repos {
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .footer-content {
+        padding: 0 1rem;
+    }
+}

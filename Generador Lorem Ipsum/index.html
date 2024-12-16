@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Lorem Ipsum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-pen-fancy"></i> Generador de Lorem Ipsum</h1>
+        <p class="subtitle">Crea texto de relleno personalizado para tus proyectos</p>
+    </header>
+    <main>
+        <div class="options-container">
+            <div class="option-group">
+                <div class="option-item">
+                    <label for="paragraphs">
+                        <i class="fas fa-paragraph"></i> Párrafos:
+                        <span id="paragraphsValue" class="value-display">1</span>
+                    </label>
+                    <input type="range" id="paragraphs" min="1" max="50" value="1">
+                </div>
+                <div class="option-item">
+                    <label for="words">
+                        <i class="fas fa-text-width"></i> Palabras por párrafo:
+                        <span id="wordsValue" class="value-display">10</span>
+                    </label>
+                    <input type="range" id="words" min="1" max="100" value="10">
+                </div>
+            </div>
+            <div class="option-group">
+                <div class="option-item">
+                    <label for="tags">
+                        <i class="fas fa-code"></i> Etiqueta HTML:
+                    </label>
+                    <select id="tags" class="select-styled"></select>
+                </div>
+                <div class="option-item">
+                    <label for="include">
+                        <i class="fas fa-brackets-curly"></i> Incluir HTML:
+                    </label>
+                    <select id="include" class="select-styled">
+                        <option value="Yes">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <button id="generate" class="generate-btn">
+                <i class="fas fa-magic"></i> Generar Lorem Ipsum
+            </button>
+            <button id="copy" class="copy-btn">
+                <i class="fas fa-copy"></i> Copiar al Portapapeles
+            </button>
+        </div>
+        <div class="output">
+            <div class="output-header">
+                <span class="output-title">Texto Generado</span>
+            </div>
+            <div id="output-content"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p class="developer-info">
+                    <i class="fas fa-code"></i> Desarrollado por Antonio Barrios
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/595982580075" 
+                   class="whatsapp-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Contactar por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="footer-love">
+                <p>Creado con <i class="fas fa-heart pulse"></i> para la comunidad</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

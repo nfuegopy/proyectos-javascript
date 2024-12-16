@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Edad | Herramienta Profesional</title>
+    <meta name="description" content="Calculadora de edad profesional que determina la edad exacta entre dos fechas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <div class="calculator-card">
+            <header class="calculator-header">
+                <h1><i class="fas fa-calculator"></i> Calculadora de Edad</h1>
+                <p class="subtitle">Calcula la edad exacta entre dos fechas</p>
+            </header>
+
+            <div class="calculator-body">
+                <div class="input-group">
+                    <label for="fechaNacimiento">
+                        <i class="fas fa-birthday-cake"></i> Fecha de Nacimiento
+                    </label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="date" 
+                            id="fechaNacimiento" 
+                            name="fechaNacimiento"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="fechaActual">
+                        <i class="fas fa-calendar-alt"></i> Fecha de Cálculo
+                    </label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="date" 
+                            id="fechaActual" 
+                            name="fechaActual"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button 
+                    type="button" 
+                    id="calcularBtn" 
+                    class="btn-calcular"
+                    onclick="calcularEdad()"
+                >
+                    <i class="fas fa-hourglass-half"></i>
+                    Calcular Edad
+                </button>
+
+                <div class="resultado-container">
+                    <div id="resultado" class="resultado"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p class="developer-info">
+                    <i class="fas fa-code"></i> Desarrollado por Antonio Barrios
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/595982580075" 
+                   class="whatsapp-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Contactar por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="footer-love">
+                <p>Creado con <i class="fas fa-heart pulse"></i> para la comunidad</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

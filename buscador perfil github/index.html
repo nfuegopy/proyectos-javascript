@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Buscador de Perfiles GitHub</title>
+</head>
+<body>
+    <div class="container">
+        <form class="search-form" id="userInput">
+            <div class="header">
+                <i class="fab fa-github"></i>
+                <h1>Buscador de Perfiles GitHub</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" 
+                       id="inputBox" 
+                       autocomplete="off" 
+                       placeholder="Buscar usuario de GitHub..."
+                       aria-label="Buscar usuario">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+        <main id="main">
+            <!-- El contenido se cargará dinámicamente -->
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p class="developer-info">
+                    <i class="fas fa-code"></i> Desarrollado por Antonio Barrios
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/595982580075" 
+                   class="whatsapp-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   title="Contactar por WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="footer-love">
+                <p>Creado con <i class="fas fa-heart pulse"></i> para la comunidad</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+    --background-color: #f5f6fa;
+    --note-color: #ffffff;
+    --text-color: #2c3e50;
+    --footer-bg: #2c3e50;
+    --whatsapp-color: #25D366;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.add-button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.note {
+    background: var(--note-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.note-header {
+    background: var(--primary-color);
+    padding: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.note-header i {
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.note-header i:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.note textarea {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    resize: none;
+    font-family: inherit;
+}
+
+.note .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--background-color);
+    padding: 0.8rem 1rem;
+    background: var(--background-color);
+}
+
+.note textarea:focus {
+    outline: none;
+}
+
+/* Footer Personalizado */
+.footer {
+    background: var(--footer-bg);
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.developer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.footer-social .whatsapp-link {
+    color: var(--whatsapp-color);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-social .whatsapp-link:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.footer-love {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-love .fa-heart {
+    color: var(--accent-color);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .notes-container {
+        grid-template-columns: 1fr;
+    }
+}
