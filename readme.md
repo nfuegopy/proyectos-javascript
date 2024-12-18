@@ -46,7 +46,7 @@ Colección de proyectos web desarrollados con JavaScript, HTML y CSS. Cada proye
   - Copia rápida
   - Diseño moderno
 
-### 📄 Verificacion fortaleza de contraseña
+### 🔐 Verificacion fortaleza de contraseña
 - **Descripción**: Verificacion de seguridad de contraseña.
 - **Características**:
   - Verificas que tenga caracteres
