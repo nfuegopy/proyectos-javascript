@@ -46,6 +46,14 @@ Colección de proyectos web desarrollados con JavaScript, HTML y CSS. Cada proye
   - Copia rápida
   - Diseño moderno
 
+### 📄 Verificacion fortaleza de contraseña
+- **Descripción**: Verificacion de seguridad de contraseña.
+- **Características**:
+  - Verificas que tenga caracteres
+  - Verificas que tenga mayuscula y minuscula
+  - Verificas que tenga numeros y letras combinadas
+  - Una barra para el nivel de seguridad
+    
 ## 🛠️ Tecnologías Utilizadas
 
 - HTML5
