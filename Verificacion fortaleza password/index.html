@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Fortaleza de Contraseñas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <header class="card-header">
+          <h1><i class="fas fa-shield-alt"></i> Verificador de Contraseñas</h1>
+          <p class="subtitle">Comprueba la seguridad de tu contraseña</p>
+        </header>
+
+        <div class="card-body">
+          <div class="input-group">
+            <label for="password">
+              <i class="fas fa-key"></i> Tu Contraseña
+            </label>
+            <div class="password-input">
+              <input
+                type="password"
+                id="password"
+                placeholder="Escribe tu contraseña aquí"
+                autocomplete="off"
+              />
+              <button
+                id="togglePassword"
+                class="toggle-password"
+                title="Mostrar/Ocultar contraseña"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="strength-section">
+            <label>
+              <i class="fas fa-chart-line"></i> Nivel de Seguridad
+            </label>
+            <div class="power-container">
+              <div id="power-point"></div>
+            </div>
+            <div id="strength-text" class="strength-text"></div>
+          </div>
+
+          <div class="criteria-list">
+            <h3><i class="fas fa-check-circle"></i> Criterios de Seguridad</h3>
+            <ul>
+              <li>Mínimo 6 caracteres</li>
+              <li>Al menos una letra minúscula</li>
+              <li>Al menos una letra mayúscula</li>
+              <li>Al menos un número</li>
+              <li>Al menos un carácter especial (!@#$%^&*)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <p class="developer-info">
+            <i class="fas fa-code"></i> Desarrollado por Antonio Barrios
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://wa.me/595982580075"
+            class="whatsapp-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Contactar por WhatsApp"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="footer-love">
+          <p>Creado con <i class="fas fa-heart pulse"></i> para la comunidad</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
